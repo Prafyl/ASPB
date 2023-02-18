@@ -6,7 +6,12 @@ import AboutUs from "../components/AboutUs/AboutUs";
 const about = () => {
   return (
     <>
-      <Navbar />
+      <Navbar
+        about={true}
+        dashboard={false}
+        leaderboard={false}
+        analysis={false}
+      />
       <AboutUs />
     </>
   );

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import LeaderBoardList from "../Leaderboard/LeaderBoardList";
 
-const LeaderBoard = () => {
+const LeaderBoard = (props) => {
   const [leaderBoardData, setLeaderBoardData] = useState([]);
   async function getLeaderboard(file) {
     const result = await fetch(file);
@@ -24,9 +24,14 @@ const LeaderBoard = () => {
   }, []);
 
   return (
-    <div class="mt-4  w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-      <div class="flex items-center justify-between mb-4">
-        <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">
+    <div
+      className={
+        props.className +
+        " mt-4  w-full p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700"
+      }
+    >
+      <div classname="flex items-center justify-between mb-4">
+        <h5 className="text-xl font-bold leading-none text-gray-900 dark:text-white">
           LeaderBoards
         </h5>
       </div>

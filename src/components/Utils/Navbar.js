@@ -1,9 +1,8 @@
 import React from "react";
-import Image from "next/image";
 import Logo from "./Logo";
 import Link from "next/link";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div>
       <nav className="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
@@ -53,7 +52,11 @@ const Navbar = () => {
               <li>
                 <Link
                   href="/"
-                  className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                  className={`block py-2 pl-3 pr-4 ${
+                    props.dashboard && " text-blue-700 "
+                  } ${
+                    !props.dashboard && " text-white "
+                  }rounded md:bg-transparent md:p-0 `}
                   aria-current="page"
                 >
                   Dashboard
@@ -62,26 +65,38 @@ const Navbar = () => {
               <li>
                 <Link
                   href="/about"
-                  className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  className={`block py-2 pl-3 pr-4 ${
+                    props.about && " text-blue-700 "
+                  } ${
+                    !props.about && " text-white "
+                  }rounded md:bg-transparent md:p-0 `}
                 >
                   About
                 </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                <Link
+                  href="/leaderboard"
+                  className={`block py-2 pl-3 pr-4 ${
+                    props.leaderboard && " text-blue-700 "
+                  } ${
+                    !props.leaderboard && " text-white "
+                  }rounded md:bg-transparent md:p-0 `}
                 >
-                  LeaderBoard
-                </a>
+                  LeaderBoards
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
-                  className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                <Link
+                  href="/analysis"
+                  className={`block py-2 pl-3 pr-4 ${
+                    props.analysis && " text-blue-700 "
+                  } ${
+                    !props.analysis && " text-white "
+                  }rounded md:bg-transparent md:p-0 `}
                 >
-                  Learn
-                </a>
+                  Analysis
+                </Link>
               </li>
             </ul>
           </div>
