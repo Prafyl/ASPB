@@ -8,16 +8,19 @@ const Main = () => {
         <div className="flex flex-col align-items justify-center align-middle p-6 h-48 m-5 rounded-lg bg-slate-400 border-4 text-4xl border-slate-900 ">
           <Link href="/questions/physics/1">
             <p className="truncate ">Physics</p>
+            <p className="">(+2)</p>
           </Link>
         </div>
         <div className="flex flex-col align-items justify-center p-6 m-4 mt-5 h-48 rounded-lg bg-slate-400 text-4xl border-4 border-slate-900">
           <Link href="/questions/chemistry/1">
             <p className="truncate">Chemistry</p>
+            <p className="">(+2)</p>
           </Link>
         </div>
         <div className="flex flex-col align-items justify-center p-6 m-4 mt-5 h-48 rounded-lg bg-slate-400 text-4xl border-4 border-slate-900">
           <Link href="/questions/maths/1">
             <p className="truncate">Maths</p>
+            <p className="">(+2)</p>
           </Link>
         </div>
         <div className="flex flex-col align-items justify-center p-6 m-4  h-48 rounded-lg bg-slate-400 text-4xl border-4 border-slate-900">
