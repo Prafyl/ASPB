@@ -1,17 +1,18 @@
 import React, { useContext, useState, useRef } from "react";
+import { useRouter } from "next/router";
 
 import AnalysisQuestionList from "./AnalysisQuestionList";
 
 import AuthContext from "../../store/analysis-context";
 
 const Analysis = (prop) => {
+  const router = useRouter();
   const ctx = useContext(AuthContext);
   const inputRef = useRef();
   console.log(ctx);
 
   async function postLeaderboard(file, params) {
     const response = await fetch(file, params);
-    console.log(response);
   }
 
   const submitHandler = (e) => {
@@ -32,6 +33,7 @@ const Analysis = (prop) => {
         }),
       }
     );
+    router.push("/");
   };
 
   return (
