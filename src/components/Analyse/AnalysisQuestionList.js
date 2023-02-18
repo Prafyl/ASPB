@@ -9,15 +9,19 @@ const AnalysisQuestionList = () => {
   const ctx = useContext(AuthContext);
 
   const listItem = ARRAYOFNUMBERS.map((e) => {
-    return (
-      <AnalysisQuestionListItem
-        key={ctx.result[e].no}
-        question={ctx.result[e].question}
-        options={ctx.result[e].options}
-        answer={ctx.result[e].answer}
-        choice={ctx.result[e].choice}
-      />
-    );
+    if (ctx.result[e]) {
+      return (
+        <AnalysisQuestionListItem
+          key={ctx.result[e].no}
+          question={ctx.result[e].question}
+          options={ctx.result[e].options}
+          answer={ctx.result[e].answer}
+          choice={ctx.result[e].choice}
+        />
+      );
+    } else {
+      return <p>Nothing to analyse yet!</p>;
+    }
   });
 
   return (
