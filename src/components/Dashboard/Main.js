@@ -21,8 +21,8 @@ const Main = () => {
           </Link>
         </div>
         <div className="flex flex-col align-items justify-center p-6 m-4  h-48 rounded-lg bg-slate-400 text-4xl border-4 border-slate-900">
-          <Link href="/questions/mcq/1">
-            <p className="truncate">MCQ</p>
+          <Link href="/questions/computer/1">
+            <p className="truncate">Computer</p>
           </Link>
         </div>
         <div className="flex text-5xl flex-col align-items justify-center p-6 m-4 h-48 rounded-lg bg-blue-600 border-4 border-slate-900 truncate">
@@ -36,18 +36,18 @@ const Main = () => {
           </Link>
         </div>
         <div className="flex flex-col align-items justify-center p-6 m-4 h-48 rounded-lg bg-slate-400 text-4xl border-4 border-slate-900">
-          <Link href="/questions/gk/1">
-            <p className="truncate">GK</p>
+          <Link href="/questions/physicsG/1">
+            <p className="truncate">Physics(General)</p>
           </Link>
         </div>
         <div className="flex flex-col align-items justify-center p-6 m-4 h-48 rounded-lg bg-slate-400 text-4xl border-4 border-slate-900 ">
-          <Link href="/questions/practice/1">
-            <p className="truncate">Computer</p>
+          <Link href="/questions/chemistryG/1">
+            <p className="truncate">Chemistry(General)</p>
           </Link>
         </div>
         <div className="flex flex-col align-items justify-center p-6 m-4 h-48 rounded-lg bg-slate-400 text-4xl border-4 border-slate-900">
-          <Link href="/questions/truncate/1">
-            <p className="truncate">Nepali</p>
+          <Link href="/questions/MathsG/1">
+            <p className="truncate">Maths(General)</p>
           </Link>
         </div>
       </div>
