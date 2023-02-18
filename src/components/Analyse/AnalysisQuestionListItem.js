@@ -4,7 +4,7 @@ import CorrectSVG from "../Utils/CorrectSVG";
 import IncorrectSVG from "../Utils/IncorrectSVG";
 
 const AnalysisQuestionListItem = (props) => {
-  if (props.answer) {
+  if (props.options) {
     return (
       <li className="py-3 sm:py-4">
         <div className="flex items-center space-x-4">
