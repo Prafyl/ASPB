@@ -37,17 +37,17 @@ const Main = () => {
         </div>
         <div className="flex flex-col align-items justify-center p-6 m-4 h-48 rounded-lg bg-slate-400 text-4xl border-4 border-slate-900">
           <Link href="/questions/physicsG/1">
-            <p className="truncate">Physics(General)</p>
+            <p className="">Physics(General)</p>
           </Link>
         </div>
         <div className="flex flex-col align-items justify-center p-6 m-4 h-48 rounded-lg bg-slate-400 text-4xl border-4 border-slate-900 ">
           <Link href="/questions/chemistryG/1">
-            <p className="truncate">Chemistry(General)</p>
+            <p className="">Chemistry(General)</p>
           </Link>
         </div>
         <div className="flex flex-col align-items justify-center p-6 m-4 h-48 rounded-lg bg-slate-400 text-4xl border-4 border-slate-900">
           <Link href="/questions/MathsG/1">
-            <p className="truncate">Maths(General)</p>
+            <p className="">Maths(General)</p>
           </Link>
         </div>
       </div>
