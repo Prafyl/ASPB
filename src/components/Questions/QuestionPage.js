@@ -6,6 +6,18 @@ import Options from "./Options";
 const question = (props) => {
   const [questionData, setQuestionData] = useState({});
 
+  let type = props.type;
+  if (type == "physicsG") {
+    type = "physics";
+  }
+
+  if (type == "chemistryG") {
+    type = "chemistry";
+  }
+  if (type == "MathsG") {
+    type = "maths";
+  }
+
   async function getAnswer(file) {
     const result = await fetch(file);
     const data = await result.json();
@@ -14,7 +26,7 @@ const question = (props) => {
 
   useEffect(() => {
     getAnswer(
-      `https://test1-6e146-default-rtdb.asia-southeast1.firebasedatabase.app/${props.type}/${props.no}.json`
+      `https://test1-6e146-default-rtdb.asia-southeast1.firebasedatabase.app/${type}/${props.no}.json`
     );
   }, [props]);
   return (

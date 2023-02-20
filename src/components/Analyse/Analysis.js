@@ -22,8 +22,16 @@ const Analysis = (prop) => {
       score: ctx.totalScore,
       type: ctx.result[1].type,
     };
+
+    if (
+      ctx.result[1].type == "physicsG" ||
+      ctx.result[1].type == "chemistryG" ||
+      ctx.result[1].type == "MathsG"
+    ) {
+      return;
+    }
     postLeaderboard(
-      `https://test1-6e146-default-rtdb.asia-southeast1.firebasedatabase.app/store/${data.type}.json`,
+      `https://test1-6e146-default-rtdb.asia-southeast1.firebasedatabase.app/store/main.json`,
       {
         method: "POST",
         body: JSON.stringify({
