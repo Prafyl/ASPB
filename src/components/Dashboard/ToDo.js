@@ -3,12 +3,12 @@ import CorrectSVG from "../Utils/CorrectSVG";
 import IncorrectSVG from "../Utils/IncorrectSVG";
 
 const Sidebar = () => {
-  const [main, setMain] = useState(false);
-  const [physics, setPhysics] = useState(false);
-  const [chemistry, setChemistry] = useState(false);
+  const [main, setMain] = useState(true);
+  const [physics, setPhysics] = useState(true);
+  const [chemistry, setChemistry] = useState(true);
   const [english, setEnglish] = useState(false);
   const [exercise, setExercise] = useState(false);
-  const [book, setBook] = useState(false);
+  const [book, setBook] = useState(true);
 
   const mainHandler = (e) => {
     setMain((prev) => {

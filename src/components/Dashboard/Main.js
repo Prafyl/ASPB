@@ -35,7 +35,7 @@ const Main = () => {
         </div>
         <div className="flex flex-col align-items justify-center p-6 m-4 h-48 rounded-lg bg-slate-400 text-4xl border-4 border-slate-900">
           <Link href="/questions/english/1">
-            <p className="truncate">Coming soon</p>
+            <p className="truncate">Biology</p>
           </Link>
         </div>
         <div className="flex flex-col align-items justify-center p-6 m-4 h-48 rounded-lg bg-slate-400 text-4xl border-4 border-slate-900">
